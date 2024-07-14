@@ -1,0 +1,20 @@
+.logo-brand-crm {
+    height: 4.375rem;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 800;
+    /* padding: 1.5rem 1rem; */
+    text-align: center;
+    text-transform: uppercase;
+    /* letter-spacing:.05rem; */
+    z-index: 1
+}
+.logo-brand-crm:hover{
+    text-decoration: none;
+}
+.none-deco:hover{
+    text-decoration: none;
+}
+.none-deco{
+    text-decoration: none;
+}
