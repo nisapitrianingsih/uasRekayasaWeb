@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', ' | Add Product')
 
 @section('content')
     <div class="container">
@@ -21,6 +22,12 @@
                 <label for="stock">Stock:</label>
                 <input type="number" name="stock" class="form-control" required>
             </div>
+            <div class="form-group">
+                <label for="min_stock">Minimum Stock</label>
+                <input type="number" class="form-control" id="min_stock" name="min_stock" required>
+            </div>
+            <a href="{{ route('products.index') }}" class="btn btn-info"><i class="fas fa-arrow-left mr-1"></i>Back to
+                Products</a>
             <button type="submit" class="btn btn-primary">Add Product</button>
         </form>
     </div>

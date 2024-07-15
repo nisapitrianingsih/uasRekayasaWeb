@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="card-body">
         <h1>Sales</h1>
-        <a href="{{ route('sales.create') }}" class="btn btn-primary">Add Sale</a>
+        <a href="{{ route('sales.create') }}" class="btn btn-primary mb-3">Add Sale</a>
         @if (session('success'))
             <div class="alert alert-success">
                 {{ session('success') }}

@@ -24,16 +24,35 @@ class SaleController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'customer_id' => 'required|exists:customers,id',
-            'product_id' => 'required|exists:products,id',
-            'quantity' => 'required|integer|min:1',
-            'total_price' => 'required|numeric',
-        ]);
+      // Validasi request
+    $request->validate([
+        'customer_id' => 'required|exists:customers,id',
+        'product_id' => 'required|exists:products,id',
+        'quantity' => [
+            'required',
+            'integer',
+            'min:1',
+            // Validasi custom untuk memeriksa stok tersedia
+            function ($attribute, $value, $fail) use ($request) {
+                $product = Product::findOrFail($request->product_id);
+                if ($value > $product->stock) {
+                    $fail("The $attribute must not be greater than available stock.");
+                }
+            },
+        ],
+        'total_price' => 'required|numeric',
+    ]);
 
-        Sale::create($request->all());
+    // Buat penjualan baru
+    $sale = Sale::create($request->all());
 
-        return redirect()->route('sales.index')->with('success', 'Sale recorded successfully.');
+    // Kurangi jumlah stock produk yang terkait
+    $product = Product::findOrFail($request->product_id);
+    $product->stock -= $request->quantity;
+    $product->save();
+
+    // Redirect ke halaman penjualan dengan pesan sukses
+    return redirect()->route('sales.index')->with('success', 'Sale recorded successfully.');
     }
 
     public function show(Sale $sale)

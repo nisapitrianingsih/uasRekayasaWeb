@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', ' | Edit Product')
 
 @section('content')
     <div class="container">
@@ -23,7 +24,27 @@
                 <label for="stock">Stock:</label>
                 <input type="number" name="stock" class="form-control" value="{{ $product->stock }}" required>
             </div>
-            <button type="submit" class="btn btn-primary">Update Product</button>
+            <div class="form-group">
+                <label for="min_stock">Minimum Stock:</label>
+                <input type="number" name="min_stock" class="form-control" value="{{ $product->min_stock }}" required>
+            </div>
+            <div class="form-group">
+                <label for="supplier_id">Supplier:</label>
+                <select name="supplier_id" class="form-control" required>
+                    @foreach ($suppliers as $supplier)
+                        <option value="{{ $supplier->id }}" {{ $supplier->id == $product->supplier_id ? 'selected' : '' }}>
+                            {{ $supplier->name }}
+                        </option>
+                    @endforeach
+                </select>
+            </div>
+            <a href="{{ route('products.index') }}" class="btn btn-info"><i class="fas fa-arrow-left mr-1"></i>Back to
+                Products</a>
+            <button type="submit" class="btn btn-primary">
+                <i class="fas fa-sync-alt"></i>
+                Update Product
+            </button>
         </form>
     </div>
+
 @endsection

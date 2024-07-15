@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Laravel') }} @yield('title')</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -40,7 +40,7 @@
                     <div class="sidebar-brand-icon rotate-n-15">
                         <i class="fas fa-laugh-wink"></i>
                     </div>
-                    <div class="sidebar-brand-text mx-3">CRM APP</div>
+                    <div class="sidebar-brand-text mx-3">{{ config('app.name', 'Laravel') }}</div>
                 </a>
 
                 <!-- Divider -->
@@ -48,7 +48,7 @@
 
                 <!-- Nav Item - Dashboard -->
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">
+                    <a class="nav-link" href="{{ route('dashboard') }}">
                         <i class="fas fa-fw fa-tachometer-alt"></i>
                         <span>Dashboard</span></a>
                 </li>
@@ -61,21 +61,65 @@
                     Interface
                 </div>
 
-                <!-- Nav Item - Pages Collapse Menu -->
+                <!-- Nav Item - Pages Collapse Menu  Produk-->
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                         aria-expanded="true" aria-controls="collapseTwo">
-                        <i class="fas fa-fw fa-cog"></i>
+                        <i class="fas fa-box"></i>
                         <span>Product</span>
                     </a>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">aksi</h6>
+                            <h6 class="collapse-header">action</h6>
                             <a class="collapse-item" href="{{ route('products.index') }}">product</a>
-                            <a class="collapse-item" href="{{ route('products.index') }}">product</a>
-                            {{-- <a class="collapse-item" href="{{ route('products.edit') }}">edit product</a> k --}}
                             <a class="collapse-item" href="{{ route('products.create') }}">tambah Product</a>
-                            <a class="collapse-item" href="cards.html">Cards</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- Nav Item - Pages Collapse Menu  Supplier-->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSupp"
+                        aria-expanded="true" aria-controls="collapseSupp">
+                        <i class="fas fa-box"></i>
+                        <span>
+                            suppliers
+                        </span>
+                    </a>
+                    <div id="collapseSupp" class="collapse" aria-labelledby="headingSupp" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">action</h6>
+                            <a class="collapse-item" href="{{ route('suppliers.index') }}">product</a>
+                            <a class="collapse-item" href="{{ route('suppliers.create') }}">tambah Product</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
+                        aria-expanded="true" aria-controls="collapseThree">
+                        <i class="fas fa-box"></i>
+                        <span>Sales</span>
+                    </a>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">aksi</h6>
+                            <a class="collapse-item" href="{{ route('sales.index') }}">sales </a>
+                            <a class="collapse-item" href="{{ route('sales.create') }}"> tambah sales</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFord"
+                        aria-expanded="true" aria-controls="collapseFord">
+                        <i class="fas fa-box"></i>
+                        <span>Customers</span>
+                    </a>
+                    <div id="collapseFord" class="collapse" aria-labelledby="headingFord" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">aksi</h6>
+                            <a class="collapse-item" href="{{ route('customers.index') }}">Customers</a>
+                            <a class="collapse-item" href="{{ route('customers.create') }}">tambah Customers</a>
                         </div>
                     </div>
                 </li>
