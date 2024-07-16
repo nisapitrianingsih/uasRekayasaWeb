@@ -20,6 +20,7 @@
                             <th>Description</th>
                             <th>Price</th>
                             <th>Stock</th>
+                            <th>Supplier</th>
                             <th>minum Stock</th>
                             <th>Action</th>
                         </tr>
@@ -31,6 +32,7 @@
                             <th>Description</th>
                             <th>Price</th>
                             <th>Stock</th>
+                            <th>Supplier</th>
                             <th>minum Stock</th>
                             <th>Action</th>
                         </tr>
@@ -44,6 +46,7 @@
                                 <td>{{ $product->description }}</td>
                                 <td>Rp {{ $product->price }}</td>
                                 <td>{{ $product->stock }}</td>
+                                <td>{{ $product->supplier ? $product->supplier->name : 'No Supplier' }}</td>
                                 <td>{{ $product->min_stock }}</td>
                                 <td>
                                     <a href="{{ route('products.show', $product->id) }}" class="btn btn-info">

@@ -80,7 +80,7 @@
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSupp"
                         aria-expanded="true" aria-controls="collapseSupp">
-                        <i class="fas fa-box"></i>
+                        <i class="fas fa-truck-loading"></i>
                         <span>
                             suppliers
                         </span>
@@ -97,7 +97,7 @@
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
                         aria-expanded="true" aria-controls="collapseThree">
-                        <i class="fas fa-box"></i>
+                        <i class="fas fa-chart-line"></i>
                         <span>Sales</span>
                     </a>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
@@ -112,7 +112,7 @@
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFord"
                         aria-expanded="true" aria-controls="collapseFord">
-                        <i class="fas fa-box"></i>
+                        <i class="fas fa-users"></i>
                         <span>Customers</span>
                     </a>
                     <div id="collapseFord" class="collapse" aria-labelledby="headingFord" data-parent="#accordionSidebar">
@@ -125,7 +125,22 @@
                 </li>
 
 
-
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBeli"
+                        aria-expanded="true" aria-controls="collapseBeli">
+                        <i class="fas fa-users"></i>
+                        <span>Purchases</span>
+                    </a>
+                    <div id="collapseBeli" class="collapse" aria-labelledby="headingFord"
+                        data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">aksi</h6>
+                            <a class="collapse-item" href="{{ route('purchases.index') }}"> Purchases</a>
+                            <a class="collapse-item" href="{{ route('purchases.create') }}">tambah purchases</a>
+                        </div>
+                    </div>
+                </li>
                 <!-- Divider -->
                 <hr class="sidebar-divider">
 
