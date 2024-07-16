@@ -88,8 +88,8 @@
                     <div id="collapseSupp" class="collapse" aria-labelledby="headingSupp" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">action</h6>
-                            <a class="collapse-item" href="{{ route('suppliers.index') }}">product</a>
-                            <a class="collapse-item" href="{{ route('suppliers.create') }}">tambah Product</a>
+                            <a class="collapse-item" href="{{ route('suppliers.index') }}">suppliers</a>
+                            <a class="collapse-item" href="{{ route('suppliers.create') }}">tambah supplier</a>
                         </div>
                     </div>
                 </li>
@@ -129,7 +129,7 @@
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBeli"
                         aria-expanded="true" aria-controls="collapseBeli">
-                        <i class="fas fa-users"></i>
+                        <i class="fas fa-shopping-cart icon"></i>
                         <span>Purchases</span>
                     </a>
                     <div id="collapseBeli" class="collapse" aria-labelledby="headingFord"

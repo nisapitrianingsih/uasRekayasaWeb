@@ -1,0 +1,24 @@
+.pagination-wrapper nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination-wrapper .page-link {
+    color: #636b6f;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    margin: 0 2px;
+    border-radius: 5px;
+}
+
+.pagination-wrapper .page-link:hover {
+    background-color: #f1f1f1;
+}
+
+.pagination-wrapper .active .page-link {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+}

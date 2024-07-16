@@ -10,7 +10,7 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::all();
+        $products = Product::paginate(5);
         return view('products.index', compact('products'));
     }
 
@@ -25,7 +25,7 @@ class ProductController extends Controller
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
             'price' => 'required|numeric',
-            'stock' => 'required|integer',
+            // 'stock' => 'required|integer',
             'min_stock' => 'required|integer',
         ]);
 
@@ -53,7 +53,7 @@ class ProductController extends Controller
             'name' => 'required|string|max:255',
             'description' => 'nullable|string',
             'price' => 'required|numeric',
-            'stock' => 'required|integer',
+            // 'stock' => 'required|integer',
             'supplier_id' => 'required|exists:suppliers,id',
         ]);
         // $product = Product::findOrFail($id);

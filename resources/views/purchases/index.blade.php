@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <h1>Purchases</h1>
-        <a href="{{ route('purchases.create') }}" class="btn btn-primary">Add Purchase</a>
+        <a href="{{ route('purchases.create') }}" class="btn btn-primary mb-3">Add Purchase</a>
         <table class="table">
             <thead>
                 <tr>
@@ -22,7 +22,7 @@
                         <td>{{ $purchase->supplier->name }}</td>
                         <td>{{ $purchase->product->name }}</td>
                         <td>{{ $purchase->quantity }}</td>
-                        <td>{{ $purchase->total_price }}</td>
+                        <td>Rp {{ $purchase->total_price }}</td>
                         <td>
                             <!-- Add edit and delete buttons here -->
                         </td>
@@ -30,5 +30,9 @@
                 @endforeach
             </tbody>
         </table>
+        <div class="pagination-wrapper">
+            {{ $purchases->links() }}
+        </div>
+    </div>
     </div>
 @endsection

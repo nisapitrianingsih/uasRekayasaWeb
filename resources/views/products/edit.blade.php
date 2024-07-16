@@ -21,10 +21,6 @@
                     required>
             </div>
             <div class="form-group">
-                <label for="stock">Stock:</label>
-                <input type="number" name="stock" class="form-control" value="{{ $product->stock }}" required>
-            </div>
-            <div class="form-group">
                 <label for="min_stock">Minimum Stock:</label>
                 <input type="number" name="min_stock" class="form-control" value="{{ $product->min_stock }}" required>
             </div>

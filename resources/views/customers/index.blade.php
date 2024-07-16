@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <h1>Customers</h1>
-        <a href="{{ route('customers.create') }}" class="btn btn-primary">Add Customer</a>
+        <a href="{{ route('customers.create') }}" class="btn btn-primary mb-3">Add Customer</a>
         <table class="table">
             <thead>
                 <tr>
@@ -37,5 +37,6 @@
                 @endforeach
             </tbody>
         </table>
+        {{ $customers->links() }}
     </div>
 @endsection

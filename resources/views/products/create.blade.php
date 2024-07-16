@@ -19,10 +19,6 @@
                 <input type="number" name="price" class="form-control" step="0.01" required>
             </div>
             <div class="form-group">
-                <label for="stock">Stock:</label>
-                <input type="number" name="stock" class="form-control" required>
-            </div>
-            <div class="form-group">
                 <label for="min_stock">Minimum Stock</label>
                 <input type="number" class="form-control" id="min_stock" name="min_stock" required>
             </div>

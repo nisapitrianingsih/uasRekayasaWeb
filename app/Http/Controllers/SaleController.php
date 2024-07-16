@@ -11,7 +11,7 @@ class SaleController extends Controller
 {
     public function index()
     {
-          $sales = Sale::with('customer', 'product')->get();
+          $sales = Sale::with('customer', 'product')->paginate(5);
     return view('sales.index', compact('sales'));
     }
 

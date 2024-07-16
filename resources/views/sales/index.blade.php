@@ -27,7 +27,7 @@
                         <td>{{ $sale->customer->first_name }} {{ $sale->customer->last_name }}</td>
                         <td>{{ $sale->product->name }}</td>
                         <td>{{ $sale->quantity }}</td>
-                        <td>{{ $sale->total_price }}</td>
+                        <td>Rp {{ $sale->total_price }}</td>
                         <td>
                             <a href="{{ route('sales.show', $sale->id) }}" class="btn btn-info">View</a>
                             <a href="{{ route('sales.edit', $sale->id) }}" class="btn btn-warning">Edit</a>
